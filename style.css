@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .ipbox{
+    text-shadow: 0 0 10px rgb(25, 117, 215),
+    0 0 80px rgb(25, 117, 215),
+    0 0 70px rgb(25, 117, 215),
+    0 0 80px rgb(25, 117, 215),
+    0 0 1200px rgb(25, 117, 215);
+} */
+
+.btn
+{
+    box-shadow: -4px -4px 7px rgba(255,255,255,0.1), 3px 3px 5px rgba(0,0,0,0.2);
+}
+
+/* .ipbox
+{
+    box-shadow: -2px 2px 0.5px rgba(255,255,255,0.1), 2px -2px 2px rgba(255,255,255,0.1);
+
+} */
+
+.calculator
+{
+    box-shadow: -4px 4px 7px rgba(255,255,255,0.1), 3px 3px 5px rgba(0,0,0,0.2), 4px -4px 7px rgba(255,255,255,0.1);
+}

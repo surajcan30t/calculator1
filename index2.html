@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calulator <scientific></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-900 h-[100%] w-[100%]">
+    <div class="cal_container flex justify-center items-center mt-[5%]">
+        <div class="calculator bg-slate-950 py-3 px-4 grid grid-flow-row gap-5 rounded-lg">
+            <input type="text" id="ipbox" name="screen" class="ipbox bg-slate-950 text-justify text-purple-100 font-bold text-2xl w-[250px] h-11" disabled  />
+            <input placeholder="ANS" type="text" name="screen" id="result" class="ipbox bg-slate-950 text-right px-2  font-bold text-purple-100 text-xl w-[250px]" disabled  />
+            <div class="togglebar h-1 text-gray-600 hover:text-[#13ffd8] ease-out duration-150 text-sm flex justify-center items-center text-center"><a href="index.html">SCIENTIFIC</a></div>
+
+            <div class="input_cont grid grid-cols-5 grid-rows-7 gap-3">
+                <div onclick="sine(this)" class="btn  bg-black text-[#0bf3ff] hover:text-blue-950 hover:bg-teal-400 py-[14px] flex justify-center items-center rounded-2xl text-center font-mono text-xs font-bold ease-in duration-300">sin</div>
+                <div onclick="cosine(this)" class="btn  bg-black text-[#0bf3ff] hover:text-blue-950 hover:bg-teal-400 py-[14px] rounded-2xl text-center flex justify-center items-center font-mono text-xs font-bold ease-in duration-300">cos</div>
+                <div onclick="tang(this)" class="btn  bg-black text-[#0bf3ff] hover:text-blue-950 hover:bg-teal-400 py-[14px] rounded-2xl text-center flex justify-center items-center font-mono text-xs font-bold ease-in duration-300">tan</div>
+                <div onclick="cotan(this)" class="btn  bg-black text-[#0bf3ff] hover:text-blue-950 hover:bg-teal-400 py-[14px] rounded-2xl text-center flex justify-center items-center font-mono text-xs font-bold ease-in duration-300">cot</div>
+                <div onclick="cube(this)" class="btn  bg-black text-[#0bf3ff] hover:text-blue-950 hover:bg-teal-400 py-[14px] rounded-2xl text-center flex justify-center items-center font-mono text-xs font-bold ease-in duration-300">x<sup>3</sup></div>
+                <div onclick="facto(this)" class="btn bg-black text-[#0bf3ff] hover:text-blue-950 hover:bg-teal-400 py-[14px] rounded-2xl text-center flex justify-center items-center font-mono text-xs font-bold ease-in duration-300">x!</div>
+                <div class="btn bg-black text-[#0bf3ff] hover:text-blue-950 hover:bg-teal-400 py-[14px] rounded-2xl text-center flex justify-center items-center font-mono text-xs font-bold ease-in duration-300">bin</div>
+                <div class="btn bg-black text-[#0bf3ff] hover:text-blue-950 hover:bg-teal-400 py-[14px] rounded-2xl text-center flex justify-center items-center font-mono text-xs font-bold ease-in duration-300">oct</div>
+                <div class="btn bg-black text-[#0bf3ff] hover:text-blue-950 hover:bg-teal-400 py-[14px] rounded-2xl text-center flex justify-center items-center font-mono text-xs font-bold ease-in duration-300">hex</div>
+                <div class="btn bg-black text-[#0bf3ff] hover:text-blue-950 hover:bg-teal-400 py-[14px] rounded-2xl text-center flex justify-center items-center font-mono text-xs font-bold ease-in duration-300">&pi;</div>
+                <div onclick="reset()" class="btn  bg-black text-[#ff9710] hover:text-blue-950 hover:bg-teal-400 py-2 flex justify-center items-center rounded-2xl text-center font-mono text-xs font-bold ease-in duration-300">AC</div>
+                <div onclick="logBaseTen(this)" class="btn  bg-black text-[#0bf3ff] hover:text-blue-950 hover:bg-teal-400 py-2 flex justify-center items-center rounded-2xl text-center font-mono text-xs font-bold ease-in duration-300"><sub>log</sub>10</div>
+                <div onclick="logBaseTwo(this)" class="btn  bg-black text-[#0bf3ff] hover:text-blue-950 hover:bg-teal-400 py-2 flex justify-center items-center rounded-2xl text-center font-mono text-xs font-bold ease-in duration-300">ln</div>
+                <div onclick="handleClick(this); " class="btn  bg-black text-[#0bf3ff] hover:text-blue-950 hover:bg-teal-400 rounded-2xl text-center flex justify-center items-center font-mono py-2 text-lg font-extrabold ease-in duration-300">/</div>
+                <div onclick="remove()" class="btn  bg-black text-[#ff0505] hover:text-blue-950 hover:bg-teal-400 py-2 flex justify-center items-center rounded-2xl text-center font-mono text-xs font-bold ease-in duration-300">DEL</div>
+                <div onclick="handleClick(this)" class="btn bg-black text-[#06ff2b] hover:text-blue-950 hover:bg-teal-400 py-2 rounded-2xl text-center font-mono text-xl font-bold ease-in duration-300">7</div>
+                <div onclick="handleClick(this)" class="btn bg-black text-[#06ff2b] hover:text-blue-950 hover:bg-teal-400 py-2 rounded-2xl text-center font-mono text-xl font-bold ease-in duration-300">8</div>
+                <div onclick="handleClick(this)" class="btn bg-black text-[#06ff2b] hover:text-blue-950 hover:bg-teal-400 py-2 rounded-2xl text-center font-mono text-xl font-bold ease-in duration-300">9</div>
+                <div onclick="handleClick(this); " class="btn  bg-black text-[#0bf3ff] hover:text-blue-950 hover:bg-teal-400 py-[0px] rounded-2xl text-center flex justify-center items-center font-mono text-lg font-extrabold ease-in duration-300">*</div>
+                <div onclick="cubeRoot(this)" class="btn  btn  bg-black text-[#0bf3ff] hover:text-blue-950 hover:bg-teal-400 py-[0px] rounded-2xl text-center flex justify-center items-center font-mono text-sm font-extrabold ease-in duration-300"><sup>3</sup>&radic;</div>
+                <div onclick="handleClick(this)" class="btn bg-black text-[#06ff2b] hover:text-blue-950 hover:bg-teal-400 py-2 rounded-2xl text-center font-mono text-xl font-bold ease-in duration-300">4</div>
+                <div onclick="handleClick(this)" class="btn bg-black text-[#06ff2b] hover:text-blue-950 hover:bg-teal-400 py-2 rounded-2xl text-center font-mono text-xl font-bold ease-in duration-300">5</div>
+                <div onclick="handleClick(this)" class="btn bg-black text-[#06ff2b] hover:text-blue-950 hover:bg-teal-400 py-2 rounded-2xl text-center font-mono text-xl font-bold ease-in duration-300">6</div>
+                <div onclick="handleClick(this); " class="btn  bg-black text-[#0bf3ff] hover:text-blue-950 hover:bg-teal-400 py-[0px] rounded-2xl text-center flex justify-center items-center font-mono text-lg font-extrabold ease-in duration-300">-</div>
+                <div onclick="squareRoot(this)" class="btn  bg-black text-[#0bf3ff] hover:text-blue-950 hover:bg-teal-400 py-[0px] rounded-2xl text-center flex justify-center items-center font-mono text-sm font-extrabold ease-in duration-300">&radic;</div>
+                <div onclick="handleClick(this)" class="btn bg-black text-[#06ff2b] hover:text-blue-950 hover:bg-teal-400 py-2 rounded-2xl text-center font-mono text-xl font-bold ease-in duration-300">1</div>
+                <div onclick="handleClick(this)" class="btn bg-black text-[#06ff2b] hover:text-blue-950 hover:bg-teal-400 py-2 rounded-2xl text-center font-mono text-xl font-bold ease-in duration-300">2</div>
+                <div onclick="handleClick(this)" class="btn bg-black text-[#06ff2b] hover:text-blue-950 hover:bg-teal-400 py-2 rounded-2xl text-center font-mono text-xl font-bold ease-in duration-300">3</div>
+                <div onclick="handleClick(this); " class="btn  bg-black text-[#0bf3ff] hover:text-blue-950 hover:bg-teal-400 py-[0px] rounded-2xl text-center flex justify-center items-center font-mono text-lg font-extrabold ease-in duration-300 row-span-2">+</div>
+                <div class="btn  bg-black text-[#0bf3ff] hover:text-blue-950 hover:bg-teal-400 py-[0px] rounded-2xl text-center flex justify-center items-center font-mono text-sm font-extrabold ease-in duration-300"><sup>x</sup>/<sub>y</sub></div>
+                <div onclick="handleClick(this)" class="digit bg-black text-[#06ff2b] hover:text-blue-950 hover:bg-teal-400 py-2 rounded-2xl text-center font-mono text-xl font-bold ease-in duration-300 ">0</div>
+                <div class="btn  bg-black text-[#06ff2b] hover:text-blue-950 hover:bg-teal-400 py-2 rounded-2xl text-center font-mono text-xl font-bold ease-in duration-300">.</div>
+                <div onclick="eql()" class="btn  bg-black text-[#0bf3ff] hover:text-blue-950 hover:bg-teal-400 rounded-2xl text-center flex justify-center items-center font-mono text-xl font-bold ease-in duration-300">=</div>
+                <div onclick="sqr(this)" class="btn  bg-black text-[#0bf3ff] hover:text-blue-950 hover:bg-teal-400 py-[0px] rounded-2xl text-center flex justify-center items-center font-mono text-sm font-extrabold ease-in duration-300">x<sup>2</sup></div>
+            </div>
+        </div>
+    </div>
+    </body>
+    <script src="script.js"></script>
+</html>

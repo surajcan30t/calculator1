@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calulator <standard></title>
+    <link rel="stylesheet" href="style.css" />
+    </head>
+    <body class="bg-slate-900 h-[100%] w-[100%]">
+    <div class="cal_container flex justify-center items-center mt-[5%]">
+        <div class="calculator bg-slate-950 py-3 px-4 grid grid-flow-row gap-5 rounded-lg">
+            <input type="text" id="ipbox" name="screen" class="ipbox bg-slate-950 text-justify text-purple-100 font-bold text-2xl w-[250px] h-11" disabled  />
+            <input placeholder="ANS" type="text" name="screen" id="result" class="ipbox bg-slate-950 text-right px-2  font-bold text-purple-100 text-xl w-[250px]" disabled  />
+            <div class="togglebar h-1 text-gray-600 text-sm flex justify-center items-center text-center hover:text-[#13ffd8] ease-out duration-150"><a href="index2.html">STANDARD</a></div>
+
+            <div class="input_cont grid grid-cols-4 grid-rows-5 gap-3">
+                <div onclick="handleClick(this)" class="btn bg-gradient-to-tr from-indigo-500 to-indigo-950 text-white hover:text-black hover:bg-teal-400 py-4 rounded-2xl text-center font-mono text-xl font-bold ease-in duration-300">%</div>
+                <div onclick="reset()" class="btn bg-gradient-to-tr from-indigo-500 to-indigo-950 text-white hover:text-black hover:bg-teal-400 py-4 rounded-2xl text-center font-mono text-xl font-bold ease-in duration-300">AC</div>
+                <div onclick="remove()" class="btn bg-gradient-to-tr from-red-400 to-red-500 text-white hover:text-black hover:bg-teal-400 py-4 rounded-2xl text-center font-mono text-xl font-bold ease-in duration-300">DEL</div>
+                <div onclick="handleClick(this)" class="btn bg-gradient-to-tr from-indigo-500 to-indigo-950 text-white hover:text-black hover:bg-teal-400 py-4 rounded-2xl text-center font-mono text-xl font-bold ease-in duration-300">/</div>
+                <div onclick="handleClick(this)" class="btn bg-black text-green-500 hover:text-blue-950 hover:bg-teal-400 py-4 rounded-2xl text-center font-mono text-xl font-bold ease-in duration-300">7</div>
+                <div onclick="handleClick(this)" class="btn bg-black text-green-500 hover:text-blue-950 hover:bg-teal-400 py-4 rounded-2xl text-center font-mono text-xl font-bold ease-in duration-300">8</div>
+                <div onclick="handleClick(this)" class="btn bg-black text-green-500 hover:text-blue-950 hover:bg-teal-400 py-4 rounded-2xl text-center font-mono text-xl font-bold ease-in duration-300">9</div>
+                <div onclick="handleClick(this)" class="btn bg-gradient-to-tr from-indigo-500 to-indigo-950 text-white hover:text-black hover:bg-teal-400 py-4 rounded-2xl text-center font-mono text-xl font-bold ease-in duration-300">*</div>
+                <div onclick="handleClick(this)" class="btn bg-black text-green-500 hover:text-blue-950 hover:bg-teal-400 py-4 rounded-2xl text-center font-mono text-xl font-bold ease-in duration-300">4</div>
+                <div onclick="handleClick(this)" class="btn bg-black text-green-500 hover:text-blue-950 hover:bg-teal-400 py-4 rounded-2xl text-center font-mono text-xl font-bold ease-in duration-300">5</div>
+                <div onclick="handleClick(this)" class="btn bg-black text-green-500 hover:text-blue-950 hover:bg-teal-400 py-4 rounded-2xl text-center font-mono text-xl font-bold ease-in duration-300">6</div>
+                <div onclick="handleClick(this)" class="btn bg-gradient-to-tr from-indigo-500 to-indigo-950 text-white hover:text-black hover:bg-teal-400 py-4 rounded-2xl text-center font-mono text-xl font-bold">-</div>
+                <div onclick="handleClick(this)" class="btn bg-black text-green-500 hover:text-blue-950 hover:bg-teal-400 py-4 rounded-2xl text-center font-mono text-xl font-bold ease-in duration-300">1</div>
+                <div onclick="handleClick(this)" class="btn bg-black text-green-500 hover:text-blue-950 hover:bg-teal-400 py-4 rounded-2xl text-center font-mono text-xl font-bold ease-in duration-300">2</div>
+                <div onclick="handleClick(this)" class="btn bg-black text-green-500 hover:text-blue-950 hover:bg-teal-400 py-4 rounded-2xl text-center font-mono text-xl font-bold ease-in duration-300">3</div>
+                <div onclick="handleClick(this)" class="btn bg-gradient-to-r from-indigo-500 to-indigo-950 text-white hover:text-black hover:bg-teal-400 py-4 rounded-2xl text-center font-mono text-xl font-bold ease-in duration-300">+</div>
+                <div onclick="handleClick(this)" class="btn bg-black text-green-500 hover:text-blue-950 hover:bg-teal-400 py-4 rounded-2xl text-center font-mono text-xl font-bold col-span-2 ease-in duration-300">0</div>
+                <div onclick="handleClick(this)" class="btn bg-black text-green-500 hover:text-blue-950 hover:bg-teal-400 py-4 rounded-2xl text-center font-mono text-xl font-bold ease-in duration-300">.</div>
+                <div onclick="eql()" class="btn bg-gradient-to-tr from-indigo-500 to-indigo-950 text-white hover:text-black hover:bg-[#0eeded] py-4 rounded-2xl text-center font-mono text-xl font-bold ease-in duration-300">=</div>
+            </div>
+        </div>
+    </div>
+    </body>
+    <script src="script.js"></script>
+</html>
